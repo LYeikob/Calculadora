@@ -1,0 +1,49 @@
+body{
+    /* padding y margin para que todo este alineado a un lado
+    el linear gradient para hacer una mescla de colores */
+  padding: 0;  
+  margin: 0;
+  background: linear-gradient(to right, #3af0e7, #d424f7);
+}
+.calculadora-grilla{
+display: grid;
+justify-content: center;
+align-content:center;
+min-height: 120vh;
+grid-template-columns: repeat(4, 100px);
+grid-template-rows: minmax(120px, auto) repeat(5,100px);
+}
+calculadora-grilla>button{
+    border-style: dotted dashed solid double;
+    border-radius: 5%;
+ cursor: pointer;   
+ font-size: 2rem;
+ border: 1px solid rgb(11, 231, 202);
+ outline: none;
+ background-color: cornsilk;
+}
+.output{
+    grid-column: 1/-1;
+    background-color: rgb(17, 24, 24);
+    display:flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output .display{
+    color: black;
+    font-size: 0.85cm;
+    text-align: right;
+}
+.display{
+    border-radius: 30px;
+}
+.output{
+    border-radius: 20px;
+}
+.calculadora-grilla > button:hover{
+    background-color: #3af0e7;
+}
